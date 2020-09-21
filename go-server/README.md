@@ -4,10 +4,12 @@ goのginでping-pongするサーバーを作った
 # how to execute
 ```
 $ docker build -t go-server .
-$ docker run go-server
+$ docker run -p 8080:8080 go-server
 ```
 
 ```
+$ curl localhost:8080/ping
+"pong!"
 $ docker exec -it ${CONTAINER NAME} ash
 /go # apk add curl
 (1/1) Installing curl (7.69.1-r1)
